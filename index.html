@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cracks in the Foundation (CiF) — Civil Infrastructure Dataset</title>
+<meta name="description" content="CiF is the largest and most detailed civil infrastructure instance-segmentation dataset to date: ~150,000 high-resolution images curated over five years, exposing blind spots in today's vision foundation models.">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Cracks in the Foundation (CiF) — Civil Infrastructure Dataset">
+<meta property="og:description" content="The largest and most detailed civil infrastructure instance-segmentation dataset to date — ~150,000 high-resolution images, 6 defect classes, five years in the making.">
+<meta property="og:image" content="assets/img/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <a class="wordmark" href="#top">
+    <img class="wordmark-logo" src="assets/img/logos/ibm-research.svg" alt="IBM Research">
+    <span>CiF</span>
+  </a>
+  <nav>
+    <a href="https://arxiv.org/abs/2605.18413" target="_blank" rel="noopener">Paper</a>
+    <a href="https://huggingface.co/datasets/ibm-research/cif-dataset" target="_blank" rel="noopener">Dataset</a>
+    <a href="#citation">Cite</a>
+  </nav>
+</header>
+
+<section class="hero" id="top">
+  <img class="hero-bg" src="assets/img/hero-teaser.jpg" alt="High-resolution photograph of a cracked and spalling concrete bridge surface, the kind of imagery annotated in the CiF dataset" width="2400" height="1065" fetchpriority="high">
+  <div class="hero-scrim" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <h1>Cracks in the Foundation</h1>
+    <p class="tagline">A Civil Infrastructure Dataset to Challenge Vision Foundation Models</p>
+
+    <p class="authors">
+      Nicola Farronato<sup>*</sup>, Niccolò Avogaro<sup>*</sup>, Thomas Frick, Mattia Rigotti,
+      Rizwan Ullah Khan, Michele Magno, Konrad Schindler, Cristiano Malossi, Florian Scheidegger
+    </p>
+    <p class="affiliations">IBM Research &middot; ETH Zürich &middot; University of Twente</p>
+    <p class="footnote"><sup>*</sup>Equal contribution</p>
+
+    <div class="cta-row">
+      <a class="btn btn-primary" href="https://arxiv.org/abs/2605.18413" target="_blank" rel="noopener">Paper</a>
+      <a class="btn btn-primary" href="https://huggingface.co/datasets/ibm-research/cif-dataset" target="_blank" rel="noopener">Dataset</a>
+      <a class="btn btn-secondary" href="#citation">Cite</a>
+    </div>
+  </div>
+</section>
+
+<main>
+
+  <section id="stats" class="stats-bar">
+    <div class="stat-tile">
+      <span class="stat-value">~150,000</span>
+      <span class="stat-label">images</span>
+    </div>
+    <div class="stat-tile">
+      <span class="stat-value">~250,000</span>
+      <span class="stat-label">defect masks</span>
+    </div>
+    <div class="stat-tile">
+      <span class="stat-value">6</span>
+      <span class="stat-label">defect classes</span>
+    </div>
+    <div class="stat-tile">
+      <span class="stat-value">5 years</span>
+      <span class="stat-label">of data collection</span>
+    </div>
+    <div id="downloads-stat" class="stat-tile" hidden>
+      <span class="stat-value" data-stat="total-downloads">—</span>
+      <span class="stat-label">HF downloads</span>
+      <span class="stat-sub" data-stat="last30-downloads"></span>
+      <span class="stat-updated" data-stat="downloads-updated"></span>
+    </div>
+  </section>
+
+  <section class="ibm-feature">
+    <img src="assets/img/logos/ibm-research.svg" alt="IBM Research" width="1075" height="401">
+  </section>
+
+  <section id="abstract" class="prose-section">
+    <h2>Abstract</h2>
+    <div class="abstract-body" id="abstract-body">
+      <p>
+        Automated structural health monitoring is essential to prevent catastrophic infrastructure
+        failures. Precise, pixel-level defect segmentation is needed to accurately assess structural
+        integrity, but progress in defect segmentation for civil infrastructures has been held back
+        by an extreme scarcity of data, which requires costly expert annotation. The need for data is
+        accentuated by algorithmic hurdles intrinsic to the problem, including center-bias and the
+        need to rely more on shape when inspecting nearly textureless building materials. To remove
+        the bottleneck, we introduce Cracks in the Foundation (CiF), the largest and most detailed
+        civil infrastructure (instance) segmentation dataset to date, comprising &asymp;150,000
+        high-resolution images meticulously curated over five years in collaboration with civil
+        engineering experts. With the help of this unprecedented data source, we expose a blind spot
+        of current visual AI: despite the advent of promptable Foundation Models (FMs) and Vision
+        Language Models (VLMs), and despite the impressive abilities of today's specialised
+        segmentation models, it turns out that dense image understanding in the built environment is
+        nowhere near solved. Our evaluations indicate that even the most recent zero-shot FMs face
+        significant challenges when deployed on real-world infrastructure and even the performance
+        of specialised models with domain-specific supervision plateaus at &asymp;25% mAP. CiF
+        establishes inspection of civil infrastructure, an elementary and seemingly easy perceptual
+        task, as an open challenge that reveals fundamental weaknesses of present-day models trained
+        predominantly on internet images, literally and figuratively highlighting cracks in the
+        current foundation model paradigm.
+      </p>
+    </div>
+    <button type="button" class="read-more-btn" data-expand-target="#abstract-body" aria-expanded="false">Read more</button>
+  </section>
+
+  <section id="gallery" class="gallery-section">
+    <h2>Defect Classes</h2>
+    <p class="section-intro">CiF annotates six real-world defect types observed across five years of bridge and infrastructure inspection.</p>
+    <div class="gallery-grid">
+      <figure class="gallery-card" style="--accent:#2fb6c9">
+        <img src="assets/img/gallery/algae.jpg" alt="Example of algae growth on a concrete surface" loading="lazy" width="600" height="600">
+        <figcaption><strong>Algae</strong><span>Biological surface growth that indicates sustained moisture.</span></figcaption>
+      </figure>
+      <figure class="gallery-card" style="--accent:#c2318f">
+        <img src="assets/img/gallery/crack.jpg" alt="Example of a crack in concrete" loading="lazy" width="600" height="600">
+        <figcaption><strong>Crack</strong><span>Linear discontinuities found in the concrete or its coating.</span></figcaption>
+      </figure>
+      <figure class="gallery-card" style="--accent:#e08a2b">
+        <img src="assets/img/gallery/net-crack.jpg" alt="Example of net-cracking, an interconnected polygonal cracking pattern" loading="lazy" width="600" height="600">
+        <figcaption><strong>Net-Crack</strong><span>Interconnected polygonal cracking, typically from fatigue or shrinkage.</span></figcaption>
+      </figure>
+      <figure class="gallery-card" style="--accent:#d64545">
+        <img src="assets/img/gallery/precipitation.jpg" alt="Example of precipitation staining (efflorescence) on concrete" loading="lazy" width="600" height="600">
+        <figcaption><strong>Precipitation</strong><span>A crack containing mineral deposits (efflorescence) left by water seepage.</span></figcaption>
+      </figure>
+      <figure class="gallery-card" style="--accent:#3f9142">
+        <img src="assets/img/gallery/rust.jpg" alt="Example of rust staining from exposed reinforcement" loading="lazy" width="600" height="600">
+        <figcaption><strong>Rust</strong><span>Oxidation of exposed or embedded steel reinforcement.</span></figcaption>
+      </figure>
+      <figure class="gallery-card" style="--accent:#3a6bd6">
+        <img src="assets/img/gallery/spalling.jpg" alt="Example of concrete spalling" loading="lazy" width="600" height="600">
+        <figcaption><strong>Spalling</strong><span>Detachment or fragmentation of the surface material.</span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section id="dataset" class="prose-section">
+    <h2>Dataset</h2>
+    <ul class="fact-list">
+      <li>300,708 rows &middot; ~123&nbsp;GB &middot; license: CDLA Permissive 2.0</li>
+      <li>Collected over five years with infrastructure partners (Sund &amp; Bælt, Trafikverket, Canton of Zürich)</li>
+      <li>Hosted on Hugging Face: <a href="https://huggingface.co/datasets/ibm-research/cif-dataset" target="_blank" rel="noopener">ibm-research/cif-dataset</a></li>
+    </ul>
+  </section>
+
+  <section id="citation" class="prose-section">
+    <h2>Citation</h2>
+    <pre id="bibtex-block"><code>@misc{farronato2026cracks,
+  title         = {Cracks in the Foundation: A Civil Infrastructure Dataset to Challenge Vision Foundation Models},
+  author        = {Farronato, Nicola and Avogaro, Niccolò and Frick, Thomas and Rigotti, Mattia and Khan, Rizwan Ullah and Magno, Michele and Schindler, Konrad and Malossi, Cristiano and Scheidegger, Florian},
+  year          = {2026},
+  eprint        = {2605.18413},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CV}
+}</code></pre>
+    <button type="button" class="btn btn-secondary" data-copy-target="#bibtex-block">Copy BibTeX</button>
+  </section>
+
+</main>
+
+<section class="partners" aria-label="Research and data-collection partners">
+  <div class="partners-inner">
+    <div class="partner-group">
+      <span class="partners-label">In collaboration with</span>
+      <ul class="logo-wall">
+        <li><img src="assets/img/logos/sund-baelt.svg" alt="Sund &amp; Bælt" width="567" height="74"></li>
+        <li><img src="assets/img/logos/trafikverket.svg" alt="Trafikverket" width="440" height="92"></li>
+        <li><img src="assets/img/logos/canton-zurich.png" alt="Canton of Zürich" width="1176" height="426"></li>
+      </ul>
+    </div>
+
+    <hr class="partners-divider">
+
+    <div class="partner-group">
+      <span class="partners-label">Research institutions</span>
+      <ul class="logo-wall">
+        <li><img src="assets/img/logos/ibm-research.svg" alt="IBM Research" width="1075" height="401"></li>
+        <li><img src="assets/img/logos/eth-zurich.png" alt="ETH Zürich" width="611" height="120"></li>
+        <li><img src="assets/img/logos/university-of-twente.png" alt="University of Twente" width="334" height="134"></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <p>
+    <a href="https://arxiv.org/abs/2605.18413" target="_blank" rel="noopener">Paper</a> ·
+    <a href="https://huggingface.co/datasets/ibm-research/cif-dataset" target="_blank" rel="noopener">Dataset</a> ·
+    CDLA Permissive 2.0 license
+  </p>
+  <p>&copy; 2026 IBM Research, ETH Zürich</p>
+</footer>
+
+<script src="assets/js/downloads.js" defer></script>
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>
