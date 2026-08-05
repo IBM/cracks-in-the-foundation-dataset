@@ -1,34 +1,28 @@
-# Cracks in the Foundation (CiF) — Website
+# Cracks in the Foundation (CiF)
 
-Static promotional site for the CiF dataset & paper, served via GitHub Pages at
-`https://<username>.github.io/<repo>/`.
+**CiF** is a civil infrastructure instance-segmentation dataset, comprising ~150,000 curated over five years in collaboration with civil engineering experts. The dataset exposes fundamental blind spots in today's vision foundation models, establishing infrastructure inspection as an open challenge that reveals weaknesses in models trained predominantly on internet images.
 
-- Paper: https://arxiv.org/abs/2605.18413
-- Dataset: https://huggingface.co/datasets/ibm-research/cif-dataset
+## Links
 
-## Structure
+- **Paper**: [arXiv:2605.18413](https://arxiv.org/abs/2605.18413)
+- **Dataset**: [Hugging Face](https://huggingface.co/datasets/ibm-research/cif-dataset)
+- **Website**: Deployed via GitHub Pages
 
-- `index.html`, `assets/css`, `assets/js` — plain HTML/CSS/JS, no build step, no framework.
-- `assets/img/` — optimized web images (hero, gallery). Generated once from the raw source
-  material in `assets/images/` (kept for provenance, not served directly by the site).
-- `assets/images/` — raw source images/figures from the paper (full-resolution photos, defect
-  examples, comparison figures, chart PDFs). Not linked from the site; kept as provenance and to
-  regenerate `assets/img/` assets if needed.
-- `scripts/update_downloads.py` — fetches HF download stats; run daily by
-  `.github/workflows/update-downloads.yml`, which writes `assets/data/downloads.json`.
-- `CiF_Dataset_Neurips.pdf`, `CiF.pptx` — original paper/slides, kept for reference.
+## Citation
 
-## Local preview
+If you use this dataset in your research, please cite:
 
+```bibtex
+@misc{farronato2026cracks,
+  title         = {Cracks in the Foundation: A Civil Infrastructure Dataset to Challenge Vision Foundation Models},
+  author        = {Farronato, Nicola and Avogaro, Niccolò and Frick, Thomas and Rigotti, Mattia and Khan, Rizwan Ullah and Magno, Michele and Schindler, Konrad and Malossi, Cristiano and Scheidegger, Florian},
+  year          = {2026},
+  eprint        = {2605.18413},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CV}
+}
 ```
-python3 -m http.server 8000
-```
 
-then open http://localhost:8000/
+## License
 
-## Updating download stats manually
-
-Requires a Hugging Face token with access to the `ibm-research` org's publisher analytics,
-stored as the `HF_TOKEN` repository secret (Settings → Secrets and variables → Actions).
-Trigger manually via Actions → "Update HF download counter" → Run workflow, or wait for the
-daily scheduled run.
+The CiF dataset is released under the [CDLA Permissive 2.0](https://cdla.dev/permissive-2-0/) license.
